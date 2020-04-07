@@ -19,7 +19,8 @@ gem "jquery-rails"
 gem "font-awesome-rails"
 gem "ckeditor"
 gem "paperclip"
-
+gem "devise"
+gem "hirb"
 gem "bootsnap", ">= 1.1.0", require: false
 
 group :development, :test do
