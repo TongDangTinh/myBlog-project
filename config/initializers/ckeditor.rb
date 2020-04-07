@@ -11,7 +11,7 @@ Ckeditor.setup do |config|
   # Allowed image file types for upload.
   # Set to nil or [] (empty array) for all file types
   # By default: %w(jpg jpeg png gif tiff)
-  # config.image_file_types = %w(jpg jpeg png gif tiff)
+  config.image_file_types = %w(jpg jpeg png gif tiff)
 
   # Allowed flash file types for upload.
   # Set to nil or [] (empty array) for all file types
@@ -21,7 +21,7 @@ Ckeditor.setup do |config|
   # Allowed attachment file types for upload.
   # Set to nil or [] (empty array) for all file types
   # By default: %w(doc docx xls odt ods pdf rar zip tar tar.gz swf)
-  # config.attachment_file_types = %w(doc docx xls odt ods pdf rar zip tar tar.gz swf)
+  config.attachment_file_types = %w(doc docx xls odt ods pdf rar zip tar tar.gz swf)
 
   # Setup authorization to be run as a before filter
   # By default: there is no authorization.
@@ -46,7 +46,7 @@ Ckeditor.setup do |config|
   # CKEditor CDN
   # More info here http://cdn.ckeditor.com/
   # By default: nil (CDN disabled)
-  # config.cdn_url = '//cdn.ckeditor.com/4.11.3/standard/ckeditor.js'
+  config.cdn_url = '//cdn.ckeditor.com/4.11.3/standard/ckeditor.js'
 
   # JS config url
   # Used when CKEditor CDN enabled

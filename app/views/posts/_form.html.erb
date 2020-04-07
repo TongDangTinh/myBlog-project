@@ -1,0 +1,25 @@
+<%= form_for(@post) do |f| %>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="field mt-3">
+    <%= f.label :thumbnail %>
+    <%= f.file_field :thumbnail, class: "form-control" %>
+  </div>
+
+  <div class="field mt-3">
+    <%= f.label :banner %>
+    <%= f.file_field :banner, class: "form-control" %>
+  </div>
+
+  <div class="fiel mt-3">
+    <%= f.label :body %>
+    <%= f.cktext_area :body, class: "form-control" %>
+  </div>
+
+  <div class="field mt-3">
+    <%= f.submit yield(:button_text), class: "btn btn-outline-primary" %>
+  </div>
+<% end %>
