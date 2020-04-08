@@ -1,0 +1,20 @@
+<div class="img-fluid">
+  <%= image_tag @post.banner.url(:medium) %>
+</div> 
+<div class="container">
+  <div class="row">
+    <div class="jumbotron mt-3" style="width: 100%;">
+      <h2 class="display-4">
+        <%= link_to @post.title, root_path %>
+      </h2>
+      <p class="lead">
+        <%= @post.updated_at.strftime("%A, %B %e, %Y") %> by 
+        <%= @post.user.username %> | <%= pluralize(@post.views, "View") %>
+      </p>
+      <hr class="my-4">
+      <div class="post_body">
+        <%= @post.body %>
+      </div>
+    </div>
+  </div>
+</div>
