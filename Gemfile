@@ -21,6 +21,11 @@ gem "ckeditor"
 gem "paperclip"
 gem "devise"
 gem "hirb"
+gem "image_processing", "~> 1.0"
+gem "faker"
+gem "will_paginate"
+gem "friendly_id"
+
 gem "bootsnap", ">= 1.1.0", require: false
 
 group :development, :test do

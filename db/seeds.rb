@@ -10,3 +10,12 @@ User.create(email: "tinh@gmail.com",
   password: 123456,
   password_confirmation: 123456,
   admin: true)
+
+25.times do |i|
+    post = Post.new
+    post.title = Faker::Lorem.sentence(word_count: 3, random_words_to_add: 7)
+    post.body = Faker::Lorem.paragraph_by_chars(number: 1500)
+    post.user = User.first
+    post.views = Faker::Number.between(from: 1, to: 5000)
+    post.save
+end

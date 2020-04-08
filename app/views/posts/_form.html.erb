@@ -1,14 +1,9 @@
-<%= form_for(@post) do |f| %>
+<%= form_for(@post, html: { multipart: true }) do |f| %>
   <div class="field">
     <%= f.label :title %>
     <%= f.text_field :title, class: "form-control" %>
   </div>
-
-  <div class="field mt-3">
-    <%= f.label :thumbnail %>
-    <%= f.file_field :thumbnail, class: "form-control" %>
-  </div>
-
+  
   <div class="field mt-3">
     <%= f.label :banner %>
     <%= f.file_field :banner, class: "form-control" %>
