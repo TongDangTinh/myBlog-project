@@ -10,7 +10,9 @@ class PostsController < ApplicationController
   def show
     views = @post.views + 1
     @post.update(views: views)
+    @comments = @post.comments.order("created_at DESC")
   end
+  
   def new
     @post = Post.new
   end
@@ -33,6 +35,6 @@ class PostsController < ApplicationController
     end
 
     def post_params
-      params.require(:post).permit :title, :thumnail, :banner, :body
+      params.require(:post).permit :title, :banner, :body
     end
 end

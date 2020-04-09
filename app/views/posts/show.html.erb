@@ -18,3 +18,15 @@
     </div>
   </div>
 </div>
+
+<div class="container">
+  <!-- Form -->
+  <%= render "comments/form", commentable: @post, local: Comment.new %>
+
+  <!-- All the comments -->
+  <div id="comemnt-pane">
+    <%= @comments.each do |comment| %>
+      <%= render comment %>
+    <% end %>
+  </div>
+</div>
