@@ -5,7 +5,7 @@ class Comment < ApplicationRecord
 
   # Polymorphic comments
   belongs_to :commentable, polymorphic: true
-  has_many :comments, as: :commentable. dependent: :destroy
+  has_many :comments, as: :commentable, dependent: :destroy
   
   private
     def set_comment_number

@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="comment-form">
+     <%= form_with model: @comment do |f| %>
+      <div class="form-group">
+        <%= f.cktext_area :body, class: "reply-form-#{commentable.id}", 
+          id: f.object.object_id, method: :path %>
+        <%= f.submit "Post", class: "btn btn-dark float-right mt-3" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<script>
+  $(document).on("turbolinks.load", function() {
+    $("trix-button-group--file-tools").remove();
+    document.addEventListenner("trix-file-accept" function(even){
+      event.preventDefault();
+    });
+  });
+</script>
